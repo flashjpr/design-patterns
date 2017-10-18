@@ -1,5 +1,6 @@
 package encryption;
 
+// this is our Context (usually this is instantiated and initialized by clients)
 public class Encryptor {
 
     private String algorithmName;
