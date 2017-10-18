@@ -1,24 +1,23 @@
 package encryption;
 
-// this is our Context (usually this is instantiated and initialized by clients)
 public class Encryptor {
 
-    private String algorithmName;
+    private EncryptionStrategy strategy;
     private String plainText;
 
-    public Encryptor (String algorithmName) {
-        this.algorithmName = algorithmName;
+    public Encryptor (EncryptionStrategy strategy) {
+        this.strategy = strategy;
     }
 
     public void encrypt() {
-        if (algorithmName.equals("AES")) {
-            System.out.println("Encrypting the information using AES");
-            // code omitted
-        } else if (algorithmName.equals("MD5")) {
-            System.out.println("Encrypting the information using MD5");
-            // code ommited
-        } // etc etc
+        strategy.encryptData(plainText);
     }
 
-    // getters and setters for plaintext
+    public String getPlainText() {
+        return plainText;
+    }
+
+    public void setPlainText(String plainText) {
+        this.plainText = plainText;
+    }
 }
