@@ -5,7 +5,6 @@ import encryption.EncryptionStrategy;
 import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
 import javax.crypto.SecretKey;
-import java.util.Arrays;
 
 // implementing our Strategy (Encryption Strategy)
 public class BlowfishEncryptionStrategy implements EncryptionStrategy{
@@ -26,8 +25,8 @@ public class BlowfishEncryptionStrategy implements EncryptionStrategy{
             byte[] cipherText = cipher.doFinal(plainTextByteArray);
 
             System.out.println("Input: " + plaintext);
-            System.out.println("Output: " + Arrays.toString(cipherText));
-
+            System.out.println("Output: ");
+            for (int i = 0; i < cipherText.length; i++) System.out.print(cipherText[i] + " ");
 
         } catch (Exception e) {
             e.printStackTrace();
