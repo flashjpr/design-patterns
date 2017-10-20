@@ -2,9 +2,12 @@ package encryption;
 
 import encryption.algorithms.AesEncryptionStrategy;
 import encryption.algorithms.BlowfishEncryptionStrategy;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-class EncryptorTest {
+/**
+ * Created by mihai-mbp on 20/10/2017.
+ */
+public class EncryptorTest {
 
     @Test
     public void encrypt() {

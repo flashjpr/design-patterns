@@ -11,6 +11,7 @@ public class AesEncryptionStrategy implements EncryptionStrategy{
 
     @Override
     public void encryptData(String plaintext) {
+
         System.out.println("Encryption algorithm: AES");
 
         try {

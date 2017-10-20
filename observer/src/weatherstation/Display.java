@@ -13,6 +13,6 @@ public class Display implements Observer{
 
     @Override
     public void update() {
-        System.out.println(this.station.getTemperature());;
+        System.out.println(this.station.getData());;
     }
 }

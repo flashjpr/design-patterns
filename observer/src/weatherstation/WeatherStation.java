@@ -17,7 +17,7 @@ public class WeatherStation implements Observable {
 
     @Override
     public void remove(Observer observer) {
-        observers.removeIf(observer1 -> observer.equals(observer1));
+        observers.remove(observer);
     }
 
     @Override
@@ -25,7 +25,7 @@ public class WeatherStation implements Observable {
         observers.forEach(observer -> observer.update());
     }
 
-    public Integer getTemperature() {
+    public int getData() {
         return 17;
     }
 }
