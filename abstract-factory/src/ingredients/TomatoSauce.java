@@ -1,4 +1,4 @@
-package products;
+package ingredients;
 
 public class TomatoSauce implements Sauce {
 
